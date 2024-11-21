@@ -17,7 +17,7 @@ app.use(cors());
 
 // API Section Starts from here
 
-app.get('/',req,res()=>{
+app.get('/',(req,res)=>{
     res.send("API Working");
 })
 
