@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-const Connection = mongoose.connect(process.env.BACKEND_MONGOOSE_CONNECTION);
-// const Connection = mongoose.connect("mongodb://localhost:27017/Data")
-
+let Connection = mongoose.connect("mongodb+srv://huzaifaktk0905:G0khuZAifAEr@mongocluster.ld6y3.mongodb.net/Data");
 module.exports = Connection;
