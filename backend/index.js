@@ -17,6 +17,10 @@ app.use(cors());
 
 // API Section Starts from here
 
+app.get('/',req,res()=>{
+    res.send("API Working");
+})
+
 // Register API
 app.post('/register',async (req,res)=>{
     try {
