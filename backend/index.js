@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 app.use(cors({
-    origin: "https://palm-online-back.vercel.app",
+    origin: "https://palm-online-front.vercel.app",
     headers: ["Content-Type"],
     credentials: true,
 }));
