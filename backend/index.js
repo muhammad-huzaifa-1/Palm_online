@@ -18,8 +18,7 @@ app.use(express.json());
 
 app.use(cors({
     origin: "https://palm-online-front.vercel.app/",
-    headers: ["Content-Type"],
-    credentials: true,
+    methods: ["GET", "POST", ]
 }));
 app.options('*', cors())
 // API Section Starts from here
