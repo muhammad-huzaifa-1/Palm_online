@@ -64,24 +64,6 @@ app.post('/login',async (req,res)=>{
     try {
         
         if(req.body.email && req.body.password){
-            // const findUserEmail = await UserModel.findOne({email:req.body.email});
-            // const findUserPassword = await UserModel.findOne({password:req.body.password});
-
-            // if(findUserEmail && findUserPassword && req.body.email.includes('@') && req.body.email.includes("gmail.com") || req.body.email.includes("email.com")){
-            //     const User = UserModel;
-            //     const result = await User.findOne(req.body);
-            //     res.send(result);
-            // }else if(!findUserEmail && !findUserPassword){
-            //     res.send({result:"incorrect Email and Password!"})
-            // }else if(!findUserEmail){
-            //     res.send({result:"incorrect Email!"})
-            // }else if(!findUserPassword){
-            //     res.send({result:"incorrect Password!"})
-            // }else if(!req.body.email.includes('@') && !req.body.email.includes("gmail.com") || !req.body.email.includes("email.com")){
-            //     res.send({result:"Invalid Email!"})
-            // }else{
-            //     res.send({result:"No user found!"})
-            // }
             let result = await UserModel.findOne(req.body);
             if(result){
                 res.send(result);
@@ -96,7 +78,6 @@ app.post('/login',async (req,res)=>{
 
     } catch (error) {
         res.status(400).send({result:"Opp's something went wrong!"})
-        console.log(error)
     }
 })
 
