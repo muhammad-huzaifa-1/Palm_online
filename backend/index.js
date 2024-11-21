@@ -11,6 +11,8 @@ const UserModel = require('./Schemas/User');
 // Connect to Mongoose
 Connection;
 
+const PORT = process.env.PORT || 5000;
+
 // MiddleWares
 app.use(express.json());
 
@@ -114,4 +116,4 @@ app.get('/fetchUser/:_id',async(req,res)=>{
 })
 
 // Port Listener
-app.listen(5000)
+app.listen(PORT)
