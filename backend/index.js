@@ -19,7 +19,7 @@ app.use(cors({
     headers: ["Content-Type"],
     credentials: true,
 }));
-
+app.options('*', cors())
 // API Section Starts from here
 
 app.get('/',(req,res)=>{
