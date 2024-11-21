@@ -2,7 +2,7 @@
 const express = require("express");
 const app = express();
 const Connection = require('./connection/mongooseConnect');
-const cors = require('cors');
+//const cors = require('cors');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const security_Key = process.env.BACKEND_SECURITY_KEY;
@@ -13,7 +13,7 @@ Connection;
 
 // MiddleWares
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 
 // API Section Starts from here
 
