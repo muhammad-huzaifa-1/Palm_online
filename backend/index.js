@@ -30,11 +30,11 @@ app.get('/',(req,res)=>{
 // Register API
 app.post('/register',async (req,res)=>{
     try {
-        const user = UserModel;
-        const checkEmail = await user.findOne({email:req.body.email});
-        const checkUsername = await user.findOne({name:req.body.name});
-
         if(req.body.name && req.body.email && req.body.password){
+            const user = UserModel;
+            const checkEmail = await user.findOne({email:req.body.email});
+            const checkUsername = await user.findOne({name:req.body.name});
+
             if(!checkEmail && !checkUsername && req.body.password.length >= 8 && req.body.email.includes("@") && req.body.email.includes("gmail.com") || req.body.email.includes("email.com")){
                 let result = new user(req.body);
                 result = await result.save();
