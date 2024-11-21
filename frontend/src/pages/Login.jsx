@@ -26,8 +26,8 @@ const Login = () => {
         e.preventDefault();
         setBtnDisable("bg-[#B2B2B2]")
 
-        let result = await fetch(import.meta.env.VITE_REACT_API_URL + "/login",{
-            method:"post",
+        let result = await fetch("https://palm-online-front.vercel.app/login",{
+            method:"POST",
             body: JSON.stringify({email,password}),
             headers:{
                 "Content-Type" : "application/json",
