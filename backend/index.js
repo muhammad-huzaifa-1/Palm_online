@@ -28,7 +28,7 @@ app.get('/',(req,res)=>{
 })
 
 // Register API
-app.post('/register',async (req,res)=>{
+app.post('/register/',async (req,res)=>{
     try {
         if(req.body.name && req.body.email && req.body.password){
             const user = UserModel;
@@ -60,7 +60,7 @@ app.post('/register',async (req,res)=>{
 })
 
 // Login API
-app.post('/login',async (req,res)=>{
+app.post('/login/',async (req,res)=>{
     try {
         
         if(req.body.email && req.body.password){
@@ -82,7 +82,7 @@ app.post('/login',async (req,res)=>{
 })
 
 // User Data
-app.get('/fetchUser/:_id',async(req,res)=>{
+app.get('/fetchUser/:_id/',async(req,res)=>{
 
     try {
     
